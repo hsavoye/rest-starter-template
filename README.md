@@ -9,7 +9,7 @@ Ce projet est une API REST écrite en Go, utilisant le routeur Gorilla Mux et un
 - Routage avec Gorilla Mux
 - Connexion PostgreSQL
 - Configuration par fichier `.env`
-- Architecture claire et modulaire
+- Architecture claire et modulaire 
 
 ## Structure du projet
 
