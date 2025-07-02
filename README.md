@@ -27,7 +27,7 @@ serv/
 ````
 
 ## Configuration
-**Attention à bien configurer votre BDD PostgreSQL dans pgAdmin4 (Port, user, password).** 
+**Attention à bien configurer votre BDD PostgreSQL dans pgAdmin4 (Port, User, Password).** 
 
 Crée un fichier `.env` à la racine du projet avec les variables suivantes : (en fonction de votre bdd Postgres)
 
