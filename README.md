@@ -14,22 +14,22 @@ Ce projet est une API REST écrite en Go, utilisant le routeur Gorilla Mux et un
 ## Structure du projet
 
 ```
-
-.
+serv/
 ├── db/
-│   └── db.go          # Connexion à la base de données
+    └── db.go          → Connexion à la db 
 ├── handlers/
-│   └── routes.go      # Définition des routes et logique HTTP
-├── main.go            # Point d’entrée de l’application
-├── .env               # Variables d’environnement (non versionnées)
-├── go.mod             # Dépendances du projet
-└── README.md
-
+    └── routes.go      → Fonctions des routes HTTP (Get,Post) 
+├── models/            
+    └── article.go     → Structure des articles
+├── .env               → Variables pour accéder db
+├── go.mod    
+└── main.go            → Point entrée de l'app
 ````
 
 ## Configuration
+**Attention à bien configurer votre BDD PostgreSQL dans pgAdmin4 (Port, user, password).** 
 
-Crée un fichier `.env` à la racine du projet avec les variables suivantes :
+Crée un fichier `.env` à la racine du projet avec les variables suivantes : (en fonction de votre bdd Postgres)
 
 ```env
 DB_USER=postgres
@@ -73,25 +73,14 @@ Le serveur démarrera sur `http://localhost:8081`
 |     GET | `/get`    | Récupère tous les articles |
 |    POST | `/create` | Crée un nouvel article     |
 
-Exemple d’appel POST :
-
-```json
-POST /create
-{
-  "title": "Mon premier article"
-}
-```
-
 ## Test rapide avec curl
 
 ```bash
-# Créer un article
-curl -X POST http://localhost:8081/create \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Un article en Go"}'
+# Créer un article (Windows)
+curl -X POST http://localhost:8081/create -H "Content-Type: application/json" -d "{\"title\": \"Nouveau contenu\"}"
 
-# Lister les articles
-curl http://localhost:8081/get
+# Lister les articles (Windows)
+curl http://localhost:8081/articles   
 ```
 
 ## Dépendances principales
