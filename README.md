@@ -48,6 +48,8 @@ Ces variables seront chargées automatiquement au lancement de l’application.
 
    ```bash
    git clone https://github.com/hsavoye/rest-starter-template.git
+   ```
+   ```bash
    cd go-articles-api
    ```
 
