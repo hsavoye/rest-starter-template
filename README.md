@@ -47,7 +47,7 @@ Ces variables seront chargées automatiquement au lancement de l’application.
 1. Clone le dépôt :
 
    ```bash
-   git clone https://github.com/tonpseudo/go-articles-api.git
+   git clone https://github.com/hsavoye/rest-starter-template.git
    cd go-articles-api
    ```
 
